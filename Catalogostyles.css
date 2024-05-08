@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans';
+    font-family: sans-serif
 }
 .contenido{
     max-width: 1200px;
@@ -41,7 +41,7 @@
     margin: 30px 0;
 }
 .mostrador .fila .item .descripcion{
-    color: #707070;
+    color: #000000;
     font-weight: bold;
 }
 .mostrador .fila .item .precio{
@@ -77,18 +77,18 @@
     width: 80%;
 }
 .info h2{
-    color: #707070;
+    color: #000000;
     margin-bottom: 10px;
 }
 .info p{
     font-size: 14px;
-    color: #707070;
+    color: #000000;
     margin-bottom: 10px;
 }
 .info .precio{
     font-size: 30px;
     font-weight: bold;
-    color: #f85151;
+    color: #000000;
     margin-bottom: 10px;
     display: block;
 }
@@ -118,5 +118,5 @@ text-align: center;
 font-family: sans-serif;
 }
 body {
-    background-color: #cdce2a;
+    background-color: #ffffff;
 }
