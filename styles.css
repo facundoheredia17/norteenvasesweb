@@ -1,0 +1,183 @@
+:root {
+  --main-font: sans-serif;
+  --naranja: #ee9615;
+
+  --rosa: #d52f6a;
+  --negro: #2e2e2e;
+  --amarillo: #cecf2b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+  }
+body {
+display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el logo */
+#banner {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 60px 0px 0px 0px;
+
+}
+
+header {
+  background-color: var(--amarillo);
+}
+
+main {
+    flex-grow: 1;
+  padding-top: 1rem;
+  background: var(--amarillo);
+  background: linear-gradient(
+    180deg,
+    var(--amarillo) 0%,
+    var(--naranja) 85%,
+    var(--rosa) 100%
+  );
+}
+.card {
+  height: 100%;
+  background-color: var(--naranja) !important;
+  .img-card {
+    max-height: 20rem;
+    object-fit: cover;
+  }
+}
+
+.card:hover {
+  transition: 0.4s;
+  scale: 1.02;
+}
+/* Estilos para el nombre de la empresa (h1) */
+h1 {
+  font-size: larger;
+  font-size: 36px;
+  color: var(--negro);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  font-size: larger;
+
+  color: #fff;
+  text-align: center;
+  .logo {
+    width: 4rem;
+  }
+  background-color: var(--amarillo);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Estilos para la galería de fotos */
+#galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
+  font-size: large;
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: var(--verde);
+  padding: 10px;
+  text-align: center;
+  color: var(--negro);
+}
+
+.card img {
+  max-width: 100%;
+}
+
+/* Estilos para el pie de página */
+/* Estilos para el footer */
+footer {
+  font-size: larger;
+  background-color: var(--rosa);
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+#redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#redes-sociales a {
+  margin-right: 2rem;
+}
+
+#mapa {
+  text-align: right; /* Alinea el contenido del div hacia la derecha */
+  display: flex;
+  align-items: right;
+}
+ /* Estilos CSS personalizados */
+ body {
+  background-color: #f0f0f0;
+}
+header {
+  background-color: #cdce2a;
+  color: cdce2a;
+  padding-top: 20px;
+}
+main {
+  padding: 50px 0;
+}
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.btn-primary {
+  background-color: #ee9615;
+  border-color: #000000;
+  color:#000000
+}
+.btn-primary:hover {
+  background-color: #88570d;
+  border-color: #000000;
+  color:#000000
+}
+.navbar {
+  background-color: #cdce2a !important;
+}
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.carrito {
+  width: 30px; /* Establece el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  position: top; /* Permite posicionar la imagen de forma relativa */
+  top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
+  position:right;
+  margin-right: 10px;
+}
+.logo {
+  width: 4rem;
+}

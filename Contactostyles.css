@@ -1,0 +1,240 @@
+:root {
+    --main-font: sans-serif;
+    --naranja: #ee9615;
+  
+    --rosa: #d52f6a;
+    --negro: #2e2e2e;
+    --amarillo: #cecf2b;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: var(--main-font);
+    }
+  
+  /* Estilos para el logo */
+  #banner {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 60px 0px 0px 0px;
+  
+  }
+  
+  header {
+    background-color: var(--amarillo);
+    font-size: medium;
+  }
+  /* Estilos para el nombre de la empresa (h1) */
+  h1 {
+    font-size: larger;
+    font-size: 36px;
+    color: var(--negro);
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    font-size: larger;
+  
+    color: #fff;
+    text-align: center;
+    
+    .logo {
+      width: 4rem;
+    }
+    background-color: var(--amarillo);
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000000;
+  }
+  /* Estilos para el pie de página */
+  /* Estilos para el footer */
+  footer {
+    font-size: larger;
+    background-color: #f8f9fa;
+    color: #000000;
+    padding-bottom: 1rem;
+    position: absolute;
+    bottom: 12;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  #redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #redes-sociales a {
+    margin-right: 2rem;
+  }
+  
+  #mapa {
+    text-align: right; /* Alinea el contenido del div hacia la derecha */
+    display: flex;
+    align-items: right;
+  }
+   /* Estilos CSS personalizados */
+   body {
+    background-color: #f0f0f0;
+  }
+  header {
+    background-color: #cdce2a;
+    color: cdce2a;
+    padding-top: 20px;
+  }
+  main {
+    padding: 50px 0;
+  }
+  .btn-primary {
+    background-color: #ee9615;
+    border-color: #000000;
+    color:#000000
+  }
+  .btn-primary:hover {
+    background-color: #88570d;
+    border-color: #000000;
+    color:#000000
+  }
+  .navbar {
+    background-color: #cdce2a !important;
+  }
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .carrito {
+    width: 30px; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: top; /* Permite posicionar la imagen de forma relativa */
+    top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
+    position: right;
+    margin-right: 10px;
+
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 100px; /* Altura fija para el área de texto */
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+/* Estilos para la sección de dirección y horarios */
+.contact-info {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Color de fondo */
+}
+
+.contact-info h3 {
+    color: #000000; /* Color del título */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #000000; /* Color del texto */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para la información de dirección */
+.contact-info .address {
+    margin-bottom: 20px;
+}
+
+.contact-info .address strong {
+    font-weight: bold;
+}
+
+/* Estilos para los horarios */
+.contact-info .hours {
+    font-style: italic;
+}
+
+/* Estilos para el contenedor general */
+.container {
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 0 15px; /* Espacio interno */
+    box-sizing: border-box;
+}
+/* Estilos para el formulario */
+#contactForm input:invalid,
+#contactForm textarea:invalid {
+    border: 1px solid red; /* Cambia el borde a rojo */
+}
+/* Estilos para campos inválidos */
+#contactForm input.invalid,
+#contactForm textarea.invalid {
+    border-color: red; /* Color de borde rojo para campos inválidos */
+}
+
+#contactForm input.invalid:focus,
+#contactForm textarea.invalid:focus {
+    outline: none; /* Elimina el contorno en foco para campos inválidos */
+}

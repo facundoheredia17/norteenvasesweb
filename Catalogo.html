@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Catalogostyles.css">
+    <title>Catalogo de envases</title>
+</head>
+<body>
+    <h1 class="titulo">Catalogo de envases</h1>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./img/5cc.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 5 cc</p>
+                
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./img/10cc.jpg" alt="">
+                    </div>
+                    <p class="descripcion" id>Gotero x 10cc </p>
+                    
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./img/15cc.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 15 cc
+                    </p>
+                   
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/4.png" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 20 cc</p>
+                    
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/5.png" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 30 cc</p>
+                    
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/6.png" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 60 cc</p>
+                    
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/7.png" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 100 cc</p>
+                    
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/8.png" alt="">
+                    </div>
+                    <p class="descripcion">Gotero x 250 cc</p>
+                    
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="img/1.png" alt="" id="img">
+                <h2 id="modelo">Envase 1</h2>
+            </div>
+        
+
+    <script src="Catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cdce2a; /* Color de fondo similar al original */
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 80px auto 0 auto;
+    background-color: #ffffff; /* Color de fondo del contenedor */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color azul similar al original */
+    border-color: #007bff; /* Color de borde */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+    border-color: #0056b3;
+}
+
+#checkoutBtn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center; /* Centrar el texto del botón */
+}
+
+h1 {
+    text-align: center; /* Centrar el texto del encabezado h1 */
+    color: #333; /* Color del texto del encabezado */
+}
+/* Estilos para la barra de navegación */
+nav {
+    font-size: larger;
+  
+    color: #fff;
+    text-align: center;
+}
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .navbar {
+    background-color: #cdce2a !important;
+  }
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  .carrito {
+    width: 30px; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: top; /* Permite posicionar la imagen de forma relativa */
+    top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
+    position:right;
+    margin-right: 10px;
+  }
+  .logo {
+    width: 4rem;
+  }

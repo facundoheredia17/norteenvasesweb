@@ -1,0 +1,125 @@
+body {
+display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+background-image: url(./img/envasesfondoliso.jpg);
+background-size: 1000px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+nav {
+  font-size: larger;
+
+  color: #fff;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
+.navbar {
+  background-color: #cdce2a !important;
+}
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el pie de página */
+/* Estilos para el footer */
+footer {
+  font-size: larger;
+  background-color:#a4b1b9;
+  color: #fff;
+  padding-bottom: 1rem;
+  height: 100px;
+  padding: 60px;
+  border-top: 1px solid black 
+}
+
+#redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0 auto;
+}
+
+#redes-sociales a {
+  margin-right: 2rem;
+}
+
+#mapa {
+  text-align: right; /* Alinea el contenido del div hacia la derecha */
+  display: flex;
+  align-items: right;
+  margin: 10px auto 0 auto;
+}
+ /* Estilos CSS personalizados */
+ body {
+  background-color: #a4b1b9;
+  font-family: sans-serif;
+  color: #fff;
+  font-style: normal;
+  border-bottom: 1px solid black;
+
+}
+header {
+  background-color: #cdce2a;
+  color: #cdce2a;
+  padding-top: 50px;
+}
+main {
+  padding: 50px 0;
+}
+.navbar {
+  background-color: #cece2a !important;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.carrito {
+  width: 30px; /* Establece el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  position: top; /* Permite posicionar la imagen de forma relativa */
+  top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
+  position: right;
+  margin-right: 10px;
+
+}
+.logo {
+  width: 4rem;
+}
+
+.titulo1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.sombreado {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  font-size:xx-large;
+  font-style: normal;
+
+}
+p {
+  margin-bottom: 20px; /* Establece un margen inferior de 20px entre los párrafos */
+}
