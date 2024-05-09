@@ -36,34 +36,31 @@ h1 {
 }
 /* Estilos para la barra de navegación */
 nav {
-    font-size: larger;
-  
-    color: #fff;
-    text-align: center;
+  font-size: larger;
+
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  .logo {
+    width: 4rem;
+  }
+  background-color: var(--amarillo);
 }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #000000;
-  }
-  .navbar {
-    background-color: #cdce2a !important;
-  }
-  .navbar-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-  }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
   .carrito {
     width: 30px; /* Establece el ancho de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
