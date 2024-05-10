@@ -195,5 +195,61 @@ main {
   width: auto; /* Mantener el ancho proporcional a la altura */
   object-fit: cover; /* Escalar las imágenes para que llenen el contenedor sin deformarlas */
 }
+.navbar-brand img {
+  max-width: 100px; /* Ajustar el tamaño máximo del logo */
+}
+.carousel-item img {
+  max-width: 100%; /* Imágenes del carrusel al 100% del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+.social-icon {
+  width: 30px; /* Tamaño de los íconos de redes sociales */
+  height: 30px;
+  margin-right: 10px; /* Margen entre íconos */
+}
+   /* Estilos para los indicadores del carrusel */
+   .carousel-indicators {
+    position: absolute;
+    bottom: -250px; /* Ajustar la distancia desde abajo */
+    left: 36%; /* Centrar horizontalmente */
+    transform: translateX(-50%);
+}
 
+/* Estilo para los botones de los indicadores */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Hacer los indicadores circulares */
+    border:#fff;
+    background-color: rgba(255, 255, 255, 0); /* Color de fondo para indicadores no activos */
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
 
+/* Estilo para el indicador activo */
+.carousel-indicators button.active {
+    background-color: #ffffff; /* Color de fondo para indicador activo */
+}
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    padding-bottom: 0.5rem;
+    transition: border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}

@@ -123,3 +123,26 @@ main {
 p {
   margin-bottom: 20px; /* Establece un margen inferior de 20px entre los párrafos */
 }
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  padding-bottom: 0.5rem;
+  transition: border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}

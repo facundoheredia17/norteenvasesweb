@@ -1,32 +1,41 @@
-let mostrador = document.getElementById("mostrador");
-let seleccion = document.getElementById("seleccion");
-let imgSeleccionada = document.getElementById("img");
-let modeloSeleccionado = document.getElementById("modelo");
-let descripSeleccionada = document.getElementById("descripcion");
-let precioSeleccionado = document.getElementById("precio");
+// Obtener elementos relevantes
+const modal = document.getElementById('modal');
+const modalContent = document.querySelector('.modal-content');
+const modalClose = document.getElementById('close');
 
-function cargar(item){
-    quitarBordes();
-    mostrador.style.width = "60%";
-    seleccion.style.width = "40%";
-    seleccion.style.opacity = "1";
-    item.style.border = "2px solid red";
-
-    imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
-
-    modeloSeleccionado.innerHTML =  item.getElementsByTagName("p")[0].innerHTML;
-
-
+// Función para abrir la ventana modal
+function openModal(imageSrc, text) {
+    const modalImage = document.getElementById('modal-image');
+    modalImage.src = imageSrc;
+    document.getElementById('modal-text').textContent = text;
+    modal.classList.add('show'); // Agregar la clase 'show' para mostrar la ventana modal
 }
-function cerrar(){
-    mostrador.style.width = "100%";
-    seleccion.style.width = "0%";
-    seleccion.style.opacity = "0";
-    quitarBordes();
+
+// Función para cerrar la ventana modal
+modalClose.addEventListener('click', () => {
+    modal.classList.remove('show'); // Quitar la clase 'show' para ocultar la ventana modal
+});
+
+// Agregar eventos a los elementos de la galería para abrir la ventana modal
+const galleryItems = document.querySelectorAll('.gallery-item');
+galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        const imageSrc = item.querySelector('img').src;
+        const text = item.querySelector('.image-name').textContent;
+        openModal(imageSrc, text);
+    });
+});
+// Función para cerrar la ventana modal
+function closeModal() {
+    modal.classList.remove('show'); // Quitar la clase 'show' para ocultar la ventana modal
 }
-function quitarBordes(){
-    var items = document.getElementsByClassName("item");
-    for(i=0;i <items.length; i++){
-        items[i].style.border = "none";
+
+// Cerrar la ventana modal al hacer clic en la cruz
+modalClose.addEventListener('click', closeModal);
+
+// Cerrar la ventana modal al presionar la tecla Escape
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeModal();
     }
-}
+});
