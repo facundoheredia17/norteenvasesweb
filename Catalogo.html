@@ -9,75 +9,121 @@
 </head>
 <body>
   <header>
-     <!-- Barra de navegación -->
-     <nav class="navbar navbar-expand-lg shadow fixed-top">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg shadow fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <a href="index.html">
-          <img src="./img/logo.jpg" alt="Logo"class=logo>
-      </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          
-        >
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="QuienesSomos.html">Quiénes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Catalogo.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+          </ul>
           <ul class="navbar-nav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="QuienesSomos.html">Quiénes Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Catalogo.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Contacto.html">Contacto</a>
-                </li>
-            </ul>
-            
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">
-                        <img src="./img/carrito-de-compras.png" alt="Carrito De Compras" class="carrito" />
-                    </a>
-                </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <img src="./img/carrito-de-compras.png" alt="Carrito De Compras" class="carrito" />
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
+  <h1 class="titulo">Catálogo de envases</h1>
+  <div class="gallery">
+    <div class="gallery-row">
+      <!-- Contenedor de cada elemento de la galería -->
+      <div class="gallery-item">
+        <img src="./img/goteros x5cc-x250cc.jpg" alt="Goteros x10cc-x250cc">
+        <p class="image-name">Goteros x5cc a x250cc</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/Goteros Blancos x10-x100.jpg" alt="Goteros Blancos x10cc-x100cc">
+        <p class="image-name">Goteros Blancos x10cc a x100cc</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/Gotero Gris x60-x100.jpg" alt="Goteros Grises">
+        <p class="image-name">Goteros Grises x60cc y x100cc</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/Frascos x30-x100.jpg" alt="Frascos x30-x100">
+        <p class="image-name">Frascos x30cc a x100cc</p>
+      </div>
+    </div> <!-- Fin de la primera fila -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="./img/vaporizadores x30cc-x100cc.jpg" alt="Vaporizadores x30-x100">
+        <p class="image-name">Vaporizadores x30cc a x100cc</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/Frascos Boca 25.jpg" alt="Frascos Boca 25">
+        <p class="image-name">Frascos Boca 25</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/Frascos Boca 25 blancos.jpg" alt="Frascos Boca 25 Blancos">
+        <p class="image-name">Frascos Boca 25 Blancos</p>
+      </div>
+      <div class="gallery-item">
+        <img src="./img/tapa presion.jpg" alt="Potes Tapa Presion">
+        <p class="image-name">Potes Tapa Presión</p>
+      </div>
+    </div> <!-- Fin de la segunda fila -->
+    <div class="gallery-row">
+    <div class="gallery-item">
+        <img src="./img/tapa presion 2.jpg" alt="Potes Tapa Presion 2">
+        <p class="image-name">Potes Tapa Presión</p>
     </div>
-</nav>
-    </header>
-    <h1 class="titulo">Catalogo de envases</h1>
-    <div class="gallery">
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <img src="./img/10cc.jpg" alt="Gotero x 10 cc">
-                <p class="image-name">Gotero x 10 cc</p>
-            </div>
-            <!-- Agrega más elementos de la galería aquí -->
-        </div>
+    <div class="gallery-item">
+        <img src="./img/Tubos Cristal.jpg" alt="Tubos Cristal">
+        <p class="image-name">Tubos Cristal</p>
     </div>
-    
-            <!-- Agrega las otras imágenes aquí -->
-        </div>
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <span class="close" id="close">&times;</span>
-                <img src="" alt="" id="modal-image">
-                <div class="modal-text" id="modal-text">Producto</div>
-            </div>
-        </div>
+    <div class="gallery-item">
+        <img src="./img/Tubos ámbar.jpg" alt="Tubos Ambar">
+        <p class="image-name">Tubos Ámbar</p>
     </div>
-    <script src="Catalogo.js"></script>
+    <div class="gallery-item">
+        <img src="./img/tubos kham.jpg" alt="Tubos Kham">
+        <p class="image-name">Tubos Kham (Polipropileno)</p>
+    </div>
+    <!-- Fin de la tercer fila -->
+    <div class="gallery-row">
+    <div class="gallery-item">
+        <img src="./img/cucharas y vaso medidor.jpg" alt="Cucharas y vaso medidor">
+        <p class="image-name">Cucharas Medidoras y Vaso Dosificador</p>
+    </div>
+    <div class="gallery-item">
+        <img src="./img/tubo x 10 y roll on.jpg" alt="Tubo x10 y roll on">
+        <p class="image-name">Tubo x 10cc y Roll-On</p>
+    </div>
+    <div class="gallery-item">
+        <img src="./img/porta supositorio.jpg" alt="supositorio">
+        <p class="image-name">Porta Supositorio</p>
+    </div>
+  </div>
+  <!-- Ventana modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="close">&times;</span>
+      <img src="" alt="" id="modal-image">
+      <div class="modal-text" id="modal-text">Producto</div>
+    </div>
+  </div>
+  <script src="Catalogo.js"></script>
 </body>
 </html>
