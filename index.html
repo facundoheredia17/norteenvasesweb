@@ -25,18 +25,9 @@
           <a href="index.html">
             <img src="./img/logo.jpg" alt="Logo"class=logo>
         </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -177,53 +168,16 @@
         </div>
       </div>
     </footer>
-    <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-FkqWiWb7+11XMJQhrLk7oyzvNU+avTrSqTGCc1ob4n6Dp5o5sFZS0I5mYO65d1M2"
-    crossorigin="anonymous"
-></script>
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-3+V+toFehyv5gX5aWoGjnWny9T99p+FT0it+nTQ01HzzTMXeuwOl5VxWgJnFCCPs"
-    crossorigin="anonymous"
-></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    // Escuchar clic en el botón "Ver Carrito"
-    $('#ver-carrito-btn').click(function(e) {
-      e.preventDefault(); // Evita la acción por defecto del enlace
-      // Redirigir a la página del carrito
-      window.location.href = 'cart.html';
-    });
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Contador de productos
-    let contadorProductos = 0;
 
-    // Función para actualizar el contador en el botón "Ver Carrito"
-    function actualizarContadorCarrito() {
-      const verCarritoBtn = document.getElementById('ver-carrito-btn');
-      if (verCarritoBtn) {
-        verCarritoBtn.textContent = `Ver Carrito (${contadorProductos})`;
-      }
-    }
+<!-- Bootstrap JS (incluyendo Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    // Agregar evento de clic a todos los botones "Agregar al carrito"
-    const addToCartButtons = document.querySelectorAll('.addToCart');
-    addToCartButtons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        contadorProductos++;
-        actualizarContadorCarrito();
-      });
-    });
 
-    // Llamar a la función inicial para mostrar el contador al cargar la página
-    actualizarContadorCarrito();
-  });
-</script>
 <script>
   $(document).ready(function() {
       // Escuchar evento 'slid.bs.carousel' para actualizar indicadores
@@ -236,69 +190,21 @@
       });
   });
 </script>
+
 <script>
-  // Verificar si el contador existe en el almacenamiento local
-  if (localStorage.getItem('cartCount')) {
-    // Obtener el valor del contador del almacenamiento local
-    const cartCount = parseInt(localStorage.getItem('cartCount'));
-    // Actualizar el texto del botón "Ver Carrito" con el valor actual del contador
-    document.getElementById('ver-carrito-btn').textContent = `Ver Carrito (${cartCount})`;
-  } else {
-    // Si el contador no existe en el almacenamiento local, establecerlo en 0
-    localStorage.setItem('cartCount', 0);
-  }
-
-  // Agregar un evento de clic al botón "Agregar al carrito"
-  const addToCartButtons = document.querySelectorAll('.addToCart');
-  addToCartButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Incrementar el contador en 1
-      const cartCount = parseInt(localStorage.getItem('cartCount')) + 1;
-      // Guardar el nuevo valor del contador en el almacenamiento local
-      localStorage.setItem('cartCount', cartCount);
-      // Actualizar el texto del botón "Ver Carrito" con el nuevo valor del contador
-      document.getElementById('ver-carrito-btn').textContent = `Ver Carrito (${cartCount})`;
-    });
-  });
-</script>
-<script>
-  // Agregar evento clic a los botones de agregar al carrito
-  const addToCartButton = document.querySelectorAll('.addToCart');
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Obtener detalles del producto desde los atributos de datos
-      const productName = this.getAttribute('data-product-name');
-      const productPrice = this.getAttribute('data-product-price');
-
-      // Crear un objeto para el producto
-      const product = {
-        name: productName,
-        price: parseFloat(productPrice)
-      };
-
-      // Agregar el producto al carrito (aquí puedes implementar tu lógica)
-      addToCart(product);
-    });
-  });
-
-  // Función para agregar producto al carrito (solo un ejemplo)
-  function addToCart(product) {
-  }
-</script>
-<script>
-  // Activar los botones de "Anterior" y "Siguiente"
   $(document).ready(function() {
       // Manejar clic en el botón "Anterior"
       $('.carousel-control-prev').click(function() {
-          $('#carouselExampleSlidesOnly').carousel('prev');
+          $('#carouselExample').carousel('prev'); // Usar el ID correcto del carrusel
       });
 
       // Manejar clic en el botón "Siguiente"
       $('.carousel-control-next').click(function() {
-          $('#carouselExampleSlidesOnly').carousel('next');
+          $('#carouselExample').carousel('next'); // Usar el ID correcto del carrusel
       });
   });
 </script>
+
 <!-- Scripts de Bootstrap y jQuery -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -346,6 +252,21 @@
         });
     });
 </script>
+<script>
+       // Cerrar el menú cuando se hace clic en un enlace del menú en dispositivos móviles
+       $(document).ready(function() {
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+    </script>
+    <script>
+      $(document).ready(function() {
+  $('.navbar-toggler').click(function() {
+    $('#navbarNav').collapse('toggle');  // Alternar el estado de la barra de navegación
+  });
+});
+    </script>
 
 </body>
 </html>

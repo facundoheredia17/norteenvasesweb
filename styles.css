@@ -89,28 +89,6 @@ nav a {
   color: #000000;
 }
 
-/* Estilos para la galería de fotos */
-#galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.card {
-  font-size: large;
-  flex: 0 0 calc(33.33% - 20px);
-  margin-bottom: 20px;
-  background-color: var(--verde);
-  padding: 10px;
-  text-align: center;
-  color: var(--negro);
-}
-
-.card img {
-  max-width: 100%;
-}
-
 /* Estilos para el pie de página */
 /* Estilos para el footer */
 footer {
@@ -213,13 +191,14 @@ main {
     bottom: -250px; /* Ajustar la distancia desde abajo */
     left: 36%; /* Centrar horizontalmente */
     transform: translateX(-50%);
+    z-index: 1; /* Asegura que los indicadores estén sobre el carrusel */
 }
 
 /* Estilo para los botones de los indicadores */
 .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; /* Hacer los indicadores circulares */
+    width: 10px;
+    height: 10px;
+    border-radius: 100%; /* Hacer los indicadores circulares */
     border:#fff;
     background-color: rgba(255, 255, 255, 0); /* Color de fondo para indicadores no activos */
     margin-right: 8px;
@@ -230,6 +209,14 @@ main {
 .carousel-indicators button.active {
     background-color: #ffffff; /* Color de fondo para indicador activo */
 }
+
+/* Ocultar indicadores en dispositivos con un ancho máximo de 768px (versión móvil) */
+@media (max-width: 1740px) {
+  .carousel-indicators {
+    display: none; /* Ocultar los indicadores */
+  }
+}
+
 .navbar-nav .nav-item {
     position: relative;
 }
