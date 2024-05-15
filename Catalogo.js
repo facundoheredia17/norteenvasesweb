@@ -30,12 +30,49 @@ function closeModal() {
     modal.classList.remove('show'); // Quitar la clase 'show' para ocultar la ventana modal
 }
 
-// Cerrar la ventana modal al hacer clic en la cruz
-modalClose.addEventListener('click', closeModal);
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalText = document.getElementById('modal-text');
+    const closeBtn = document.getElementById('close');
 
-// Cerrar la ventana modal al presionar la tecla Escape
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        closeModal();
+    // Función para abrir la ventana modal con la imagen y el texto correspondiente
+    function openModal(imageSrc, textContent) {
+        modalImage.src = imageSrc;
+        modalText.textContent = textContent;
+        modal.style.display = 'block';
     }
+
+    // Función para cerrar la ventana modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Abrir la ventana modal al hacer clic en una imagen de la galería
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        const image = item.querySelector('img');
+        const text = item.querySelector('.image-name');
+
+        image.addEventListener('click', function() {
+            openModal(image.src, text.textContent);
+        });
+    });
+
+    // Cerrar la ventana modal al hacer clic en el botón de cierre (×)
+    closeBtn.addEventListener('click', closeModal);
+
+    // Cerrar la ventana modal al presionar la tecla Escape (Esc)
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Cerrar la ventana modal al hacer clic fuera de ella
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 });

@@ -70,6 +70,16 @@ nav {
     width: 100%;
   }
 
+  .titulo {
+    font-family: sans-serif;
+  color: #000000; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  margin-top: 120px; /* Espacio superior */
+  font-size: 2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  text-decoration: underline;
+}
+
   body {
     font-family: sans-serif;
     background-color: #cdce2a;
@@ -173,6 +183,7 @@ nav {
 .close:hover {
   color: #000; /* Cambiar color al hacer hover para resaltar */
 }
+
 /* Estilos para la galería */
 .gallery {
   max-width: 1200px;
