@@ -33,12 +33,6 @@ main {
     flex-grow: 1;
   padding-top: 1rem;
   background: var(--amarillo);
-  background: linear-gradient(
-    180deg,
-    var(--amarillo) 0%,
-    var(--naranja) 85%,
-    var(--rosa) 100%
-  );
 }
 .card {
   height: 100%;
@@ -93,8 +87,8 @@ nav a {
 /* Estilos para el footer */
 footer {
   font-size: larger;
-  background-color: var(--rosa);
-  color: #fff;
+  background-color: var(--amarillo);
+  color: #000000;
   padding-bottom: 1rem;
 }
 
@@ -103,6 +97,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 
 #redes-sociales a {
   margin-right: 2rem;
@@ -239,4 +234,20 @@ main {
 
 .navbar-nav .nav-link:hover::after {
     width: 100%;
+}
+
+.contact-info,
+.opening-hours {
+  text-align: center; /* Centrar todo el contenido */
+}
+.contact-info h5,
+.opening-hours h5 {
+  font-family: sans-serif; /* Fuente personalizada */
+  font-weight: bold; /* Letras en negrita */
+  text-decoration: underline;
+}
+.contact-info p,
+.opening-hours p {
+  margin-bottom: 0; /* Eliminar el margen inferior de los párrafos */
+  font-family: sans-serif;
 }

@@ -233,6 +233,33 @@ nav {
   transform: scale(1.1);
 }
 
+.filter-container {
+  margin-top: 20px;
+}
+
+.filter-container label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.filter-container select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos adicionales para mejorar la apariencia del select */
+.filter-container select:hover {
+  background-color: #dad5d5;
+}
+
+.filter-container select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
 /* Ajustes responsivos para la galería */
 @media (max-width: 992px) {
   .gallery-item {
@@ -251,4 +278,3 @@ nav {
     width: calc(100% - 20px);
   }
 }
-

@@ -216,28 +216,6 @@
     font-style: italic;
 }
 
-/* Estilos para el contenedor general */
-.container {
-    max-width: 960px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrar el contenido horizontalmente */
-    padding: 0 15px; /* Espacio interno */
-    box-sizing: border-box;
-}
-/* Estilos para el formulario */
-#contactForm input:invalid,
-#contactForm textarea:invalid {
-    border: 1px solid red; /* Cambia el borde a rojo */
-}
-/* Estilos para campos inválidos */
-#contactForm input.invalid,
-#contactForm textarea.invalid {
-    border-color: red; /* Color de borde rojo para campos inválidos */
-}
-
-#contactForm input.invalid:focus,
-#contactForm textarea.invalid:focus {
-    outline: none; /* Elimina el contorno en foco para campos inválidos */
-}
 .navbar-nav .nav-item {
   position: relative;
 }
@@ -283,4 +261,12 @@
 
 .navbar-nav .nav-link:hover::after {
   width: 100%;
+}
+/* Estilo para centrar el iframe */
+#iframeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Establecer el alto al 100% de la altura visible */
+  margin-top: 30vh;
 }
