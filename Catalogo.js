@@ -98,3 +98,26 @@ document.addEventListener("DOMContentLoaded", function () {
         filterItems(selectedMaterial); // Filtrar los elementos según el material seleccionado
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const materialSelect = document.getElementById('material-select');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Función para mostrar u ocultar elementos según el material seleccionado
+    function filterItems(selectedMaterial) {
+        galleryItems.forEach(item => {
+            const itemMaterials = item.getAttribute('data-material');
+
+            if (itemMaterials && (selectedMaterial === 'todos' || itemMaterials.split(' ').includes(selectedMaterial))) {
+                item.style.display = 'block'; // Mostrar el elemento si es del material seleccionado o si se selecciona 'todos'
+            } else {
+                item.style.display = 'none'; // Ocultar el elemento si no es del material seleccionado
+            }
+        });
+    }
+
+    // Manejar el evento de cambio en el select de materiales
+    materialSelect.addEventListener('change', function() {
+        const selectedMaterial = this.value.toLowerCase();
+        filterItems(selectedMaterial); // Filtrar los elementos según el material seleccionado
+    });
+});

@@ -235,30 +235,44 @@ nav {
 
 .filter-container {
   margin-top: 20px;
+  margin-left: -23px; /* Ajustado el margen izquierdo */
+  margin-right: auto; /* Ajustado el margen derecho */
+  text-align: center;
 }
 
 .filter-container label {
   font-weight: bold;
-  margin-left: 10px;
+  margin-right: 10px;
+  color: #000000;
 }
 
 .filter-container select {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 2px solid #000000;
   border-radius: 4px;
+  background-color: transparent;
+  color: #000000;
+  transition: all 0.3s ease;
 }
 
-/* Estilos adicionales para mejorar la apariencia del select */
-.filter-container select:hover {
-  background-color: #dad5d5;
-}
-
+.filter-container select:hover,
 .filter-container select:focus {
-  outline: none;
-  border-color: #66afe9;
-  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
+
+.filter-container select option {
+  background-color: #f9ebc1;
+  color: #555;
+}
+
+.filter-container select option:hover {
+  background-color: #ffffff;
+  color: #fff;
+}
+
 
 /* Ajustes responsivos para la galería */
 @media (max-width: 992px) {
