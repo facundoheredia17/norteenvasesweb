@@ -264,13 +264,13 @@ nav {
 }
 
 .filter-container select option {
-  background-color: #f9ebc1;
-  color: #555;
+  background-color: #ffffff00;
+  color: #000000;
 }
 
 .filter-container select option:hover {
-  background-color: #ffffff;
-  color: #fff;
+  background-color: transparent;
+  color: transparent;
 }
 
 

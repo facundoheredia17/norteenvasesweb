@@ -251,3 +251,30 @@ main {
   margin-bottom: 0; /* Eliminar el margen inferior de los párrafos */
   font-family: sans-serif;
 }
+
+.carousel-caption {
+  bottom: 20%;
+}
+.carousel-button {
+  position: absolute;
+  top: 380%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.carousel-button:hover {
+  background-color: #707070;
+}
+.carousel-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+}
