@@ -80,6 +80,7 @@ nav {
   text-decoration: underline;
 }
 
+
   body {
     font-family: sans-serif;
     background-color: #cdce2a;
@@ -290,5 +291,45 @@ nav {
 @media (max-width: 480px) {
   .gallery-item {
     width: calc(100% - 20px);
+  }
+}
+ /* Estilo predeterminado para el texto */
+ .product-details-text {
+  display: none; /* Ocultar por defecto */
+}
+
+/* Estilo para pantallas grandes (PC) */
+@media (min-width: 992px) {
+  .product-details-text.pc {
+    display: block; /* Mostrar en pantallas grandes */
+  }
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 991px) {
+  .product-details-text.mobile {
+    display: block; /* Mostrar en pantallas pequeñas */
+  }
+}
+/* Estilo para el texto en ambas versiones */
+.product-details-text {
+  font-family: sans-serif;
+  color: #000000; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  margin-top: 20px; /* Espacio superior */
+  font-size: 1.5rem; /* Tamaño de fuente */
+}
+
+/* Estilo para pantallas grandes (PC) */
+@media (min-width: 992px) {
+  .product-details-text.pc {
+    display: block; /* Mostrar en pantallas grandes */
+  }
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 991px) {
+  .product-details-text.mobile {
+    display: block; /* Mostrar en pantallas pequeñas */
   }
 }
