@@ -59,9 +59,40 @@
 </header>
 
 <main>
-  <div id="iframeContainer">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiGqZF_mP9G8V0Ik2gPY4rTwSqYo7n4wQUolZoraZYz5bmbQ/viewform?embedded=true" width="640" height="959" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-</div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="contact-form">
+          <h2>Contactanos</h2>
+
+          <form action="https://formsubmit.co/facundoheredia951@gmail.com" method="POST">
+              <div class="form-group">
+                  <label for="nombre">Nombre y Apellido:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="correo">Correo Electrónico:</label>
+                  <input type="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="consulta">Consulta:</label>
+                  <textarea id="consulta" name="consulta" rows="4" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+
+              <input type="hidden" name="_subject" value="Nueva Consulta">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="!Gracias! Hemos recibido su consulta, nos contactaremos con ud a la brevedad.">
+          </form>
     <!-- Texto de Dirección y Horarios de Atención -->
     <div id="horariosydireccion">
 <section class="contact-info">
@@ -132,7 +163,7 @@
           </a>
         </div>
         <div class="col col-lg-4 py-5 py-lg-0 text-center">
-          <p>Norte Envases &copy;</p>
+          <p>2024 - Norte Envases &copy;</p>
           <p>Todos los derechos reservados.</p>
         </div>
 
@@ -149,7 +180,27 @@
       </div>
     </div>
 </footer>
+<script>
+  // Función para redirigir al usuario a gracias.html después de enviar el formulario
+  function redireccionar() {
+      window.location.href = "gracias.html";
+  }
 
+  // Espera a que el documento esté completamente cargado
+  document.addEventListener("DOMContentLoaded", function(event) {
+      // Obtiene el formulario
+      var form = document.getElementById("contactForm");
+      // Agrega un evento de escucha para el envío del formulario
+      form.addEventListener("submit", function(event) {
+          // Evita el envío del formulario predeterminado
+          event.preventDefault();
+          // Redirige al usuario después de 1 segundo
+          setTimeout(redireccionar, 1000);
+          // Envía el formulario
+          this.submit();
+      });
+  });
+</script>
 </body>
 </html>
 

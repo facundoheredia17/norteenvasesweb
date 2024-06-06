@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: #cdce2a; /* Color de fondo similar al original */
+    background-color: #cccc56; /* Color de fondo similar al original */
     padding: 20px;
 }
 
@@ -59,7 +59,7 @@ nav a {
   color: #000000;
 }
 .navbar {
-  background-color: #cdce2a !important;
+  background-color: #cccc56 !important;
 }
 .navbar-nav {
   margin-left: auto;
@@ -67,8 +67,9 @@ nav a {
   align-items: center;
 }
 .navbar {
-  background-color: #cece2a !important;
+  background-color: #cccc56 !important;
 }
+
 .navbar-nav {
   display: flex;
   align-items: center;

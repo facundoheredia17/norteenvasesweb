@@ -4,7 +4,7 @@
   
     --rosa: #d52f6a;
     --negro: #2e2e2e;
-    --amarillo: #cecf2b;
+    --amarillo: #cccc56;
   }
   * {
       margin: 0;
@@ -95,7 +95,7 @@
     background-color: #f0f0f0;
   }
   header {
-    background-color: #cdce2a;
+    background-color: #cccc56;
     color: cdce2a;
     padding-top: 20px;
   }
@@ -113,7 +113,7 @@
     color:#000000
   }
   .navbar {
-    background-color: #cdce2a !important;
+    background-color: #cccc56 !important;
   }
   .navbar-nav {
     margin-left: auto;
@@ -137,52 +137,6 @@
     padding: 0;
 }
 
-.contact-section {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.contact-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.contact-form textarea {
-    height: 100px; /* Altura fija para el área de texto */
-}
-
-.contact-form button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
-}
 /* Estilos para la sección de dirección y horarios */
 .contact-info {
     padding: 50px 0;
@@ -262,11 +216,52 @@
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
-/* Estilo para centrar el iframe */
-#iframeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Establecer el alto al 100% de la altura visible */
-  margin-top: 30vh;
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #0056b3;
 }

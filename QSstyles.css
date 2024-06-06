@@ -33,7 +33,7 @@ nav a {
   color: #000000;
 }
 .navbar {
-  background-color: #cdce2a !important;
+  background-color: #cccc56 !important;
 }
 .navbar-nav {
   margin-left: auto;
@@ -80,7 +80,7 @@ footer {
 
 }
 header {
-  background-color: #cdce2a;
+  background-color: #cccc56;
   color: #cdce2a;
   padding-top: 50px;
 }
@@ -88,7 +88,7 @@ main {
   padding: 50px 0;
 }
 .navbar {
-  background-color: #cece2a !important;
+  background-color: #cccc56 !important;
 }
 .navbar-nav {
   display: flex;
@@ -155,7 +155,7 @@ body {
 
 /* Estilos para el header */
 header {
-  background-color: #cdce2a;
+  background-color: #cccc56;
   color: #000000; /* Cambiar color del texto para mayor contraste */
   padding-top: 50px;
 }
