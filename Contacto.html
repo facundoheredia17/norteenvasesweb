@@ -65,16 +65,17 @@
         <div class="contact-form">
           <h2>Contactanos</h2>
 
-          <form action="https://formsubmit.co/facundoheredia951@gmail.com" method="POST">
+          <form action="https://formsubmit.co/norteenvases@gmail.com" method="POST">
               <div class="form-group">
                   <label for="nombre">Nombre y Apellido:</label>
                   <input type="text" id="nombre" name="nombre" required>
               </div>
 
               <div class="form-group">
-                  <label for="telefono">Teléfono:</label>
-                  <input type="tel" id="telefono" name="telefono" required>
-              </div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" title="Por favor, introduce solo números" required>
+            </div>
+            
 
               <div class="form-group">
                   <label for="correo">Correo Electrónico:</label>
