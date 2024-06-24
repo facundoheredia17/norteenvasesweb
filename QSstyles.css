@@ -5,10 +5,22 @@ display: flex;
 }
 
 main {
-background-image: url(./img/envasesfondoliso.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  main {
+    background-image: url(./img/QSMovil.jpg); /* Imagen de fondo para móvil */
+  }
+}
+
+@media (min-width: 769px) {
+  main {
+    background-image: url(./img/QSPC.jpg); /* Imagen de fondo para escritorio */
+  }
 }
 
 nav {
@@ -164,12 +176,7 @@ header {
 
 
 /* Estilos para el contenido principal */
-main {
-  padding: 50px 0;
-  background-image: url(./img/goteros\ banner.jpg);
-  background-size: cover; /* Cubre el fondo */
-  background-position: center;
-}
+
 
 /* Estilos para los párrafos */
 p {

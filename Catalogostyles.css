@@ -100,7 +100,7 @@ nav {
 .gallery-item {
   width: calc(25% - 20px); /* Ancho del contenedor (25% de ancho con espacio entre elementos) */
   text-align: center;
-  background-color: #ffffff;
+  background-color: #cccc56;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
   border-radius: 10px;
@@ -145,16 +145,17 @@ nav {
 }
 
 .modal-content {
-  width: 80%; /* Ancho del contenido de la ventana modal */
-  max-width: 650px; /* Ancho máximo para la ventana modal */
+  width: 80%;
+  max-width: 650px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #e0eaf4;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0; /* Inicialmente, la opacidad es 0 */
-  transition: opacity 0.3s ease; /* Transición de opacidad */
+  opacity: 0;
+  transition: opacity 0.3s ease;
   position: relative;
-  margin: 50px auto; /* Margen superior e inferior de 50px, centrado horizontalmente */
+  margin: 50px auto;
+  font-family: sans-serif; /* Cambiar la fuente a Arial o a tu elección */
 }
 
 .modal.show {
@@ -169,6 +170,7 @@ nav {
   margin-top: 20px;
   text-align: center;
   font-family: sans-serif;
+  text-transform: uppercase;
   font-weight: bolder;
 }
 .close {
@@ -202,8 +204,8 @@ nav {
 .gallery-item {
   width: calc(25% - 20px); /* Ancho del contenedor (25% con espacio entre elementos) */
   text-align: center;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #cccc56;
+  box-shadow: 0 2px 4px #cccc56;
   padding: 10px;
   border-radius: 10px;
   overflow: hidden;
@@ -227,7 +229,7 @@ nav {
 
 .gallery-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
 }
 
 .gallery-item:active {
@@ -236,8 +238,8 @@ nav {
 
 .filter-container {
   margin-top: 20px;
-  margin-left: -23px; /* Ajustado el margen izquierdo */
-  margin-right: auto; /* Ajustado el margen derecho */
+  margin-left: -23px;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -245,6 +247,23 @@ nav {
   font-weight: bold;
   margin-right: 10px;
   color: #000000;
+  position: relative; /* Añadido para posicionar el subrayado */
+  transition: color 0.3s ease; /* Transición de color al hacer hover */
+}
+
+.filter-container label::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Posiciona el subrayado debajo del texto */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease; /* Transición del ancho al hacer hover */
+}
+
+.filter-container label:hover::after {
+  width: 100%; /* Ancho completo al hacer hover */
 }
 
 .filter-container select {
@@ -257,12 +276,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-.filter-container select:hover,
-.filter-container select:focus {
-  border-color: #ffffff;
-  background-color: transparent;
-  color: #ffffff;
-}
 
 .filter-container select option {
   background-color: #ffffff00;
@@ -273,6 +286,7 @@ nav {
   background-color: transparent;
   color: transparent;
 }
+
 
 
 /* Ajustes responsivos para la galería */
@@ -332,4 +346,52 @@ nav {
   .product-details-text.mobile {
     display: block; /* Mostrar en pantallas pequeñas */
   }
+}
+.modal-content {
+  width: 80%;
+  max-width: 650px;
+  padding: 20px;
+  background-color: #e0eaf4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: relative;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal.show .modal-content {
+  opacity: 1;
+}
+
+.modal-text {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000000; /* Color del texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+  padding: 15px; /* Padding interno para separar el texto del borde */
+  background-color: #e0eaf4; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde del contenido */
+  border-radius: 8px; /* Borde redondeado */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #000;
 }
