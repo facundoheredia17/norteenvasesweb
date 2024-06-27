@@ -1,77 +1,100 @@
-nav {
-    font-size: larger;
-  
-    color: #fff;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #000000;
-  }
-  .navbar {
-    background-color: #cccc56 !important;
-  }
-  .navbar-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-  }
-  .navbar {
-    background-color: #cccc56 !important;
-  }
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
-  .carrito {
-    width: 30px; /* Establece el ancho de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    position: top; /* Permite posicionar la imagen de forma relativa */
-    top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
-    position: right;
-    margin-right: 10px;
-  
-  }
-  .logo {
-    width: 4rem;
-  }
-  .navbar-nav .nav-item {
-    position: relative;
-  }
-  
-  .navbar-nav .nav-link {
-    padding-bottom: 0.5rem;
-    transition: border-bottom 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #000000;
-    transition: width 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover::after {
-    width: 100%;
-  }
+/* Estilos para la modal */
+.modal-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  .titulo {
-    font-family: sans-serif;
+.modal-zoomed-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.modal-zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Estilos previos para otros elementos */
+nav {
+  font-size: larger;
+  color: #fff;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar {
+  background-color: #cccc56 !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.carrito {
+  width: 30px; /* Establece el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  position: top; /* Permite posicionar la imagen de forma relativa */
+  top: 50px; /* Mueve la imagen 50px hacia abajo desde su posición original */
+  position: right;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  padding-bottom: 0.5rem;
+  transition: border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.titulo {
+  font-family: sans-serif;
   color: #000000; /* Color del texto */
   text-align: center; /* Alineación del texto */
   margin-top: 120px; /* Espacio superior */
@@ -80,12 +103,11 @@ nav {
   text-decoration: underline;
 }
 
-
-  body {
-    font-family: sans-serif;
-    background-color: #cccc56;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: sans-serif;
+  background-color: #cccc56;
+  margin: 0;
+  padding: 0;
 }
 
 .gallery {
@@ -110,81 +132,25 @@ nav {
 }
 
 .gallery-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover; /* Ajustar la imagen al tamaño del contenedor sin deformar */
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* Ajustar la imagen al tamaño del contenedor sin deformar */
+  transition: transform 0.3s ease;
 }
 
 .image-name {
-    margin-top: 10px;
-    font-weight: bold;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item:active {
-    transform: scale(1.1);
-}
-
-.modal {
-  display: none; /* Por defecto, ocultar la ventana modal */
-  position: fixed;
-  top: 6%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  z-index: 999; /* Z-index alto para asegurar que la ventana modal esté encima */
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  width: 80%;
-  max-width: 650px;
-  padding: 20px;
-  background-color: #e0eaf4;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  position: relative;
-  margin: 50px auto;
-  font-family: sans-serif; /* Cambiar la fuente a Arial o a tu elección */
-}
-
-.modal.show {
-  display: flex; /* Mostrar la ventana modal cuando tiene la clase 'show' */
-}
-
-.modal.show .modal-content {
-  opacity: 1; /* Cambiar la opacidad a 1 para mostrar la ventana modal */
-}
-
-.modal-text {
-  margin-top: 20px;
-  text-align: center;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #aaa;
-  transition: color 0.3s ease; /* Transición para el color al hacer hover */
-}
-
-.close:hover {
-  color: #000; /* Cambiar color al hacer hover para resaltar */
+  transform: scale(1.1);
 }
 
 /* Estilos para la galería */
@@ -276,7 +242,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-
 .filter-container select option {
   background-color: #ffffff00;
   color: #000000;
@@ -287,44 +252,44 @@ nav {
   color: transparent;
 }
 
-
-
 /* Ajustes responsivos para la galería */
 @media (max-width: 992px) {
   .gallery-item {
-    width: calc(33.33% - 20px);
+      width: calc(33.33% - 20px);
   }
 }
 
 @media (max-width: 768px) {
   .gallery-item {
-    width: calc(50% - 20px);
+      width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item {
-    width: calc(100% - 20px);
+      width: calc(100% - 20px);
   }
 }
- /* Estilo predeterminado para el texto */
- .product-details-text {
+
+/* Estilo predeterminado para el texto */
+.product-details-text {
   display: none; /* Ocultar por defecto */
 }
 
 /* Estilo para pantallas grandes (PC) */
 @media (min-width: 992px) {
   .product-details-text.pc {
-    display: block; /* Mostrar en pantallas grandes */
+      display: block; /* Mostrar en pantallas grandes */
   }
 }
 
 /* Estilo para pantallas pequeñas (móviles) */
 @media (max-width: 991px) {
   .product-details-text.mobile {
-    display: block; /* Mostrar en pantallas pequeñas */
+      display: block; /* Mostrar en pantallas pequeñas */
   }
 }
+
 /* Estilo para el texto en ambas versiones */
 .product-details-text {
   font-family: sans-serif;
@@ -337,28 +302,44 @@ nav {
 /* Estilo para pantallas grandes (PC) */
 @media (min-width: 992px) {
   .product-details-text.pc {
-    display: block; /* Mostrar en pantallas grandes */
+      display: block; /* Mostrar en pantallas grandes */
   }
 }
 
 /* Estilo para pantallas pequeñas (móviles) */
 @media (max-width: 991px) {
   .product-details-text.mobile {
-    display: block; /* Mostrar en pantallas pequeñas */
+      display: block; /* Mostrar en pantallas pequeñas */
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1050; /* Z-index alto para la modal */
+  justify-content: center;
+  align-items: center;
+}
+
 .modal-content {
-  width: 80%;
-  max-width: 650px;
+  width: 100%;
+  max-width: 500px;
   padding: 20px;
   background-color: #e0eaf4;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 0.3s ease;
   position: relative;
   margin: 50px auto;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
+  animation: pop-up 0.5s ease-out;
+  z-index: 1060; /* Asegura que esté por encima del fondo semitransparente */
 }
 
 .modal.show {
@@ -369,29 +350,75 @@ nav {
   opacity: 1;
 }
 
-.modal-text {
-  margin-top: 20px;
-  text-align: center;
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1040; /* Z-index inferior a la modal */
+}
+
+.modal.fade:not(.show) {
+  opacity: 0;
+}
+
+.modal.fade:not(.show) .modal-content {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+@keyframes pop-up {
+  0% {
+      transform: scale(0.6);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.modal-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+}
+
+.modal-zoomed-image-container {
+  position: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1060;
+}
+
+.modal-zoomed-image-container.active {
+  display: flex;
+}
+
+.modal-zoomed-image {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: zoom-out;
+}
+
+.image-name {
+  font-family: sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
-  color: #000000; /* Color del texto */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
-  padding: 15px; /* Padding interno para separar el texto del borde */
-  background-color: #e0eaf4; /* Color de fondo */
-  border: 1px solid #ccc; /* Borde del contenido */
-  border-radius: 8px; /* Borde redondeado */
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #aaa;
-  transition: color 0.3s ease;
-}
-
-.close:hover {
-  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: capitalize;
 }

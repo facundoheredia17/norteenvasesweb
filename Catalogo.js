@@ -1,61 +1,55 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modal-image');
-    const modalText = document.getElementById('modal-text');
-    const closeBtn = document.getElementById('close');
-
-    // Función para abrir la ventana modal con la imagen y el texto correspondiente
-    function openModal(imageSrc, textContent) {
-        modalImage.src = imageSrc;
-        modalText.textContent = textContent;
-        modal.classList.add('show'); // Mostrar la ventana modal
-    }
-
-    // Función para cerrar la ventana modal
-    function closeModal() {
-        modal.classList.remove('show'); // Ocultar la ventana modal
-    }
-
-    // Abrir la ventana modal al hacer clic en una imagen de la galería
+document.addEventListener('DOMContentLoaded', function () {
     const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach(item => {
-        const image = item.querySelector('img');
-        const text = item.querySelector('.image-name');
-
-        image.addEventListener('click', function() {
-            openModal(image.src, text.textContent);
-        });
+  
+    document.querySelectorAll('.gallery-item img').forEach(item => {
+      item.addEventListener('click', event => {
+        const modal = new bootstrap.Modal(document.getElementById('productModal'));
+        const modalImage = document.getElementById('modal-product-image');
+        const zoomedImage = document.getElementById('zoomedImage');
+        const modalProductName = document.getElementById('modal-product-name');
+  
+        modalImage.src = event.target.src;
+        zoomedImage.src = event.target.src;
+  
+        // Obtener el nombre del producto desde el siguiente elemento p.image-name
+        const productName = event.target.nextElementSibling.textContent.trim();
+        modalProductName.textContent = productName; // Mostrar el nombre en la modal
+  
+        modal.show();
+      });
     });
-
-    // Cerrar la ventana modal al hacer clic en el botón de cierre (×)
-    closeBtn.addEventListener('click', closeModal);
-
-    // Cerrar la ventana modal al presionar la tecla Escape (Esc)
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
+  
+    document.getElementById('modal-product-image').addEventListener('click', () => {
+      const zoomedImageContainer = document.getElementById('modal-zoomed-image-container');
+      zoomedImageContainer.classList.add('active');
+  
+      // No se actualiza el nombre al hacer clic en la imagen principal del modal
     });
-
-    // Cerrar la ventana modal al hacer clic fuera de ella
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            closeModal();
-        }
+  
+    document.getElementById('zoomedImage').addEventListener('click', () => {
+      const zoomedImageContainer = document.getElementById('modal-zoomed-image-container');
+      zoomedImageContainer.classList.remove('active');
     });
-
-    // Filtrar elementos de la galería según el material seleccionado
+  
+    // Filtrado por material
     const materialSelect = document.getElementById('material-select');
-    materialSelect.addEventListener('change', function() {
-        const selectedMaterial = this.value.toLowerCase();
-        galleryItems.forEach(item => {
-            const itemMaterials = item.getAttribute('data-material');
-
-            if (itemMaterials && (selectedMaterial === 'todos' || itemMaterials.split(' ').includes(selectedMaterial))) {
-                item.style.display = 'block'; // Mostrar el elemento si es del material seleccionado o si se selecciona 'todos'
-            } else {
-                item.style.display = 'none'; // Ocultar el elemento si no es del material seleccionado
-            }
-        });
+  
+    materialSelect.addEventListener('change', function () {
+      const selectedMaterial = this.value;
+  
+      galleryItems.forEach(item => {
+        const material = item.dataset.material;
+  
+        if (selectedMaterial === 'todos' || material === selectedMaterial) {
+          item.style.display = 'block'; // Mostrar el elemento si coincide con el material seleccionado
+        } else {
+          item.style.display = 'none'; // Ocultar el elemento si no coincide
+        }
+      });
+  
+      // Asegurar que la modal se centre correctamente después de filtrar
+      const modalDialog = document.querySelector('.modal-dialog');
+      modalDialog.classList.add('modal-dialog-centered');
     });
-});
+  });
+  

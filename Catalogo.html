@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Productos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="Catalogostyles.css">
@@ -12,42 +12,40 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg shadow fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <a href="index.html">
-          <img src="./img/logo.jpg" alt="Logo"class=logo>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="QuienesSomos.html">Sobre Nosotros</a>
+              <a class="nav-link" href="QuienesSomos.html">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Catalogo.html">Productos</a>
+              <a class="nav-link" href="Catalogo.html">Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Contacto.html">Contacto</a>
+              <a class="nav-link" href="Contacto.html">Contacto</a>
             </li>
-        </ul>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">
-                        <img src="./img/carrito-de-compras.png" alt="Carrito De Compras" class="carrito" />
-                    </a>
-                </li>
-            </ul>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <img src="./img/carrito-de-compras.png" alt="Carrito De Compras" class="carrito" />
+              </a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
   </header>
   <h1 class="titulo">Catálogo de envases</h1>
-  <p class="product-details-text pc">Haga clic en cualquiera de los productos para ver los detalles.</p>
+  <p class="product-details-text pc">Haga click en cualquiera de los productos para ver los detalles.</p>
 <p class="product-details-text mobile">Presione en cualquiera de los productos para ver los detalles.</p>
   <div class="filter-container">
     <label for="material-select">Filtrar:</label>
@@ -591,18 +589,32 @@
   </div>
   </div>
   <!-- Ventana modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" id="close">&times;</span>
-      <img src="" alt="" id="modal-image">
-      <div class="modal-text" id="modal-text">Producto</div>
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- Utiliza modal-xl para pantallas grandes -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalles del producto (Click en la imagen para ampliarla)</h5>
+                
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container text-center"> <!-- Centra la imagen -->
+                    <img id="modal-product-image" src="" alt="Imagen del producto" class="modal-image img-fluid"> <!-- img-fluid hace que la imagen sea responsive -->
+                    <div id="modal-zoomed-image-container" class="modal-zoomed-image-container">
+                        <img id="zoomedImage" src="" alt="Zoomed Image" class="modal-zoomed-image img-fluid"> <!-- img-fluid para la imagen ampliada -->
+                    </div>
+                </div>
+                <p id="modal-product-name" class="modal-text text-center"></p> <!-- Centra el texto -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="Catalogo.js"></script>
-  <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="Catalogo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
